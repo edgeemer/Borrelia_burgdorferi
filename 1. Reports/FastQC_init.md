@@ -6,7 +6,7 @@
 | 🟡/🔴 | Sequence Duplication Levels | Only (40 - 65) % sequences would be remained if deduplicated | Requalify after adaptor removing |
 | 🔴 | Adapter content | Exponential growth of Nextera and PolyA from 45-49 and from 110-114 respectively to the end. Abundance of Illumina standart adapters? | Requalify after adaptor removing |
 
-# XXX_R2_XXX.fastq.gz (Reverse?)
+# Reverse reads
 
 | State | Parameter | Description | Possible Problem/Solution |
 | :--: | :-------------: | :------: | :-----------------------: |
