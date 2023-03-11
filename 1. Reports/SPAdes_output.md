@@ -4,4 +4,4 @@
 Lots of files were generated. Some warnings also present.
 I don't know how to comment it correctly, so I just left it here. 
 
-![SPAdes_S298](1.%20Reports/SPAdes_S298.png)
+![SPAdes_S298](SPAdes_S298.png)
