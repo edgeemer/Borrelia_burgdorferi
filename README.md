@@ -4,7 +4,7 @@
 |State|Step|Software|Brief description| Report |
 |:--:|:--:|:--:|:--:|:--:|
 | 🟩 | 1 | FastQC | Quality check | [MultiQC_init](https://edgeemer.github.io/B_burgdorferi_MuliQC_init/) |
-| 🟩 | 2 | FastP | Polishing raw reads (len and coverage) |  |
+| 🟩 | 2 | FastP | Filtering and trimming raw reads (len and coverage) |  |
 | 🟩 | 3 | FastQC | Quality Check | [MultiQC_trimmed](https://edgeemer.github.io/B_burgdorferi_MultiQC_trimmed/) |
 | 🟩 | 4 | SPAdes | Reads -> scaffolds |  |
 | 🟩 | 5 | custom script | Polishing scaffolds (len and coverage) |  |
