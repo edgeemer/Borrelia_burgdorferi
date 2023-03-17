@@ -16,5 +16,5 @@
 | 🟥 | 11 | bedtools | Convert the assembly to BED format |  | Possible to do without it |
 | 🟥 | 12 | bedtools | Calculate coverage |  | Possible to do without it |
 | 🟨 | 13 | IGV | Visualize coverage |  |  |
-| ⬜️ | 14 | Racon | Polishing assembly |  |  |
+| ⬜️ | 14 | Racon + Pilon | Polishing assembly |  |  |
 | ⬜️ | 15 | IGV | Visualize coverage |  |  |
