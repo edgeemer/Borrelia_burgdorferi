@@ -1,9 +1,12 @@
 # Custom Plasmid Assembly
 
-🟢 - successful assembly
-🟠 - removed during additional filtration (low coverage)
-🔴 - failed to map to reference (minimap)
-⚪️ - placeholder
+🟢 - successful assembly <br/>
+🟠 - removed during additional filtration (low coverage) <br/>
+🔴 - failed to map to reference (minimap) <br/>
+⚪️ - placeholder <br/>
+
+---
+
 
 | ↓ Sample/Plasmid →               | Bol26_cp26 | Bol26_cp32_fragment_2 | Bol26_cp32_fragment_1 | Bol26_cp32-10 | Bol26_cp32-11-1 | Bol26_cp32-11-2 | Bol26_cp32-12 | Bol26_cp32-4 | Bol26_cp32-5 | Bol26_cp32-9 | Bol26_lp17 | Bol26_lp28-3 | Bol26_lp28-4 | Bol26_lp28-9 | Bol26_lp36 | Bol26_lp54 | Bol26 gcontig_1118719648274 | Bol26 gcontig_1118719648276 | Bol26 gcontig_1118719648266 | Bol26 gcontig_1118719648268 |  
 |:--------------------------------:|:----------:|:---------------------:|:---------------------:|:-------------:|:---------------:|:---------------:|:-------------:|:------------:|:------------:|:------------:|:----------:|:------------:|:------------:|:------------:|:----------:|:----------:|:---------------------------:|:---------------------------:|:---------------------------:|:---------------------------:|
