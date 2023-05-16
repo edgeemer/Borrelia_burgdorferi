@@ -12,7 +12,7 @@
 | 🟩 | 1 | FastQC | Initial Quality check | [MultiQC_init](Reports/B_burgdorferi_MuliQC_init.html) |  |
 | 🟩 | 2 | FastP | Filtering and trimming raw reads (len and coverage) |  |  |
 | 🟩 | 3 | FastQC | Step 2 Quality Check | [MultiQC_trimmed](Reports/B_burgdorferi_MultiQC_trimmed.html) |  |
-| 🟩 | 4 | SPAdes | Assembly |  | According to the first attempt it is not possible to normally assemble core genome. It is neeeded to be redone with different parameters |
+| 🟩 | 4 | SPAdes | Assembly |  | According to the first attempt it is not possible to normally assemble core genome. It is neeeded to be redone with different parameters (✅ success) |
 | 🟩 | 5 | custom script | Filtering scaffolds (len and coverage) | [Coverage report](Reports/Coverage_SPAdes_wh_report.md) |  |
 | 🟦 | 6 | QUAST + CheckM | Quality check |  |  |
 | ⬜️ | 7 | Prokka | Annotating of the high-quality assemblies |  |  |
