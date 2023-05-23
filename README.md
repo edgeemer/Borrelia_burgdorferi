@@ -10,25 +10,25 @@
 
 |State|Step|Software|Step description| Report | Notes |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| 🟩 | 1 | FastQC         | Initial Quality check                               | [MultiQC_init](Reports/B_burgdorferi_MuliQC_init.html) |  |
-| 🟩 | 2 | FastP          | Filtering and trimming raw reads (len and coverage) |  |  |
-| 🟩 | 3 | FastQC         | Step 2 Quality Check                                | [MultiQC_trimmed](Reports/B_burgdorferi_MultiQC_trimmed.html) |  |
-| 🟩 | 4 | SPAdes         | Assembly                                            |  | According to the first attempt it is not possible to normally assemble core genome. It is neeeded to be redone with different parameters (✅ success) |
-| 🟩 | 5 | custom script  | Filtering scaffolds (len and coverage)              | [Coverage report](Reports/Coverage_SPAdes_wh_report.md) |  |
-| ⬜️ | 6 | QUAST + CheckM | Quality check                                       |  |  |
+| 🟩 | ─ | FastQC         | Initial Quality check                               | [MultiQC_Init](Reports/B_burgdorferi_MultiQC_init.html) |  |
+| 🟩 | 1 | FastP          | Filtering and trimming raw reads (len and coverage) |  | -> <a href="#Plasmid on the Reference Genome Assembly">Plasmid on the Reference Genome Assembly</a>|
+| 🟩 | └ | FastQC         | Trimmed Reads Quality Check                         | [MultiQC_Trimmed](Reports/B_burgdorferi_MultiQC_trimmed.html) |  |
+| 🟩 | 2 | SPAdes         | Assembly                                            |  |  |
+| 🟩 | 3 | custom script  | Filtering scaffolds (len and coverage)              | [Coverage Report](Reports/whole_genome/3.0.coverage_SPAdes_wh_report.md) | -> <a href="#Core Genome Assembly">Core Genome Assembly</a> |
+| ⬜️ | 4 |  |                                      |  |  |
 
 ---
 
 <h3 align="center" id="Core Genome Assembly">Core Genome Assembly</h3>
 
-Branch from S5 <a href="#Whole Genome Assembly">Whole Genome Assembly</a>
+Branch from S3 <a href="#Whole Genome Assembly">Whole Genome Assembly</a>
 
 |State|Step|Software|Step description| Report | Notes |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| 🟩 | 6 | Geneious    | Extracting main chromosomes (core genomes) |                      |  |
-| 🟩 | 7 | Prokka      | Annotating of the high-quality assemblies  | Project drive folder |  |
-| 🟦 | 8 | parsnp_tree | Comparing isolates                         |                      | gingr for visualization (File -> open -> tree file \| Export file as .vsf \| Compare non-synonymus changes to actual positions per gene |
-| ⬜️ | 9 | cgmlst      |                                            |                      | MLST |
+| 🟩 | 4 | Geneious    | Extracting main chromosomes (core genomes) |                      | Main chromosome is present ✅ |
+| 🟩 | 5 | Prokka      | Annotating of the high-quality assemblies  | Project drive folder |  |
+| 🟦 | 6 | parsnp_tree | Comparing isolates                         |                      | gingr for visualization (File -> open -> tree file \| Export file as .vsf \| Compare non-synonymus changes to actual positions per gene |
+| ⬜️ | 7 | cgmlst      |                                            |                      | MLST |
 
 COG analysis | KEGG pathway
 
@@ -36,16 +36,14 @@ COG analysis | KEGG pathway
 
 <h3 align="center" id="Plasmid on the Reference Genome Assembly">Plasmid on the Reference Genome Assembly</h3>
 
-# Probably needs to be reassembled
+Branch from S1 <a href="#Whole Genome Assembly">Whole Genome Assembly</a>
 
 |State|Step|Software|Step description| Report | Notes |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| 🟩 | 1 | FastQC               | Initial Quality check                                         | [MultiQC_init](Reports/B_burgdorferi_MuliQC_init.html) |  |
-| 🟩 | 2 | FastP                | Filtering and trimming raw reads (len and coverage)           |  |  |
-| 🟩 | 3 | FastQC               | Step 2 Quality Check                                          | [MultiQC_trimmed](Reports/B_burgdorferi_MultiQC_trimmed.html) |  |
-| 🟩 | 4 | SPAdes               | Assembly                                                      |  |  |
-| 🟩 | 5 | custom script        | Filtering scaffolds (len and coverage)                        | [Plasmid Coverage report](Reports/Coverage_SPAdes_plasmid_report.md) |  |
-| 🟩 | 6 | QUAST + CheckM       | Quality check                                                 | [MultiQC QUAST plasmid report](Reports/B_burgdorferi_MultiQC_QUAST_plasmid.html) \| [CheckM plasmid report](Reports/CheckM_plasmid_report.md) |  |
-| 🟩 | 7 | Geneious + scripts   | Assemble plasmids on the reference + assembly data, polishing | [Plasmid Assembly General Report](Reports/custom_plasmid_assembly_report.md) \| [Plasmid Assembly Detailed Report](Reports/filtration_report.md) | |
-| 🟦 | 8 | IUPAC codes analysis | Using blastn to heal ambigious nucleotides                    |  |  |
+| 🟩 | 2 | SPAdes               | Assembly                                                      |  |  |
+| 🟩 | 3 | custom script        | Filtering scaffolds (len and coverage)                        | [Plasmid Coverage Report](Reports/plasmid/3.0.custom-trim-from-spades-pl-S2.md) |  |
+| 🟩 | 4 | Geneious             | Map sequences with minimap2 to reference plasmids             |  |  |
+| 🟩 | 5 | custom script        | Filter consensus sequences (75+ coverage to reference)        | [Plasmid Filtration Report](Reports/plasmid/5.0.minimap_to_reference_plasmids_geneious_filtered-pl-S5.md) |  |
+| 🟦 | 6 | Geneious             | Map raw reads with bowtie2 to filtered plasmids               |  |  |
+| ⬜️ | 8 | Polishing sequebces  | Using blastn to heal ambigious nucleotides (IUPAC)            |  |  |
 | ⬜️ | 9 | Prokka               | Annotating of the high-quality assemblies                     |  |  |
