@@ -18,20 +18,19 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-
+title: Borrelia Burgdorferi Project
 email: dy970485@dal.ca
 description: >- # this means to ignore newlines until "baseurl:"
   The project is funded by Genome Atlantic to study the diversity of Lyme disease-causing spirochaete bacteria (genus/species = Borrelia burgdorferi) in Nova Scotian ticks and in patient biopsies.
+
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  edgeemer
 
 # Build settings
-# theme: minimal-mistakes-jekyll
-minimal_mistakes_skin: "dark"
+theme: minimal-mistakes-jekyll
 plugins:
   - jekyll-feed
-  - jekyll-include-cache
 
 # Exclude from processing.
 # The following items will not be processed, by default.
