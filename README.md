@@ -31,9 +31,8 @@ Branch from S1 <a href="#Core Genome Assembly">Core Genome Assembly</a>
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | 🟩 | 2 | SPAdes               | Assembly                                                      |  |  |
 | 🟩 | 3 | [NCBI_assembly_filter_mod.py](https://github.com/edgeemer/genome-assembly/blob/0320ef527e1031f0302d8fa471001ec75017e4f7/Scripts/assembly_length_and_coverage_filtration/NCBI_assembly_filter_mod.py#L5)        | Filtering scaffolds (len and coverage)                        | [Plasmid Coverage Report](Reports/plasmid/3.0.custom-trim-from-spades-pl-S2.md) |  |
-| 🟩 | 4 | Geneious             | Map sequences with minimap2 to reference plasmids             |  |  |
-| 🟩 | 5 | [geneious_consensus_filter.py](https://github.com/edgeemer/genome-assembly/blob/0320ef527e1031f0302d8fa471001ec75017e4f7/Scripts/geneious_consensus_reference_length_filter/geneious_consensus_filter.py)        | Filter consensus sequences (75+ coverage to reference)        | [Plasmid Filtration Report](Reports/plasmid/5.0.minimap_to_reference_plasmids_geneious_filtered-pl-S5.md) | Step is not relevant => will be removed with update |
-| 🟩 | 6 | Geneious             | Map raw reads with bowtie2 to filtered plasmids               |  |  |
-| 🟩 | 7 | [consensus_generator.py](https://github.com/edgeemer/genome-assembly/blob/0320ef527e1031f0302d8fa471001ec75017e4f7/Scripts/consensus_generator/consensus_generator.py)        | Using consensus from the step 6 improve step 4 assemblies     | [Borrelia Burgdorferi plasmid presence](https://docs.google.com/spreadsheets/d/1qOfwAWgnmrz81K9PqESubi8MufjOqxDshoJY8hGCvTg/edit?usp=sharing) |  |
-| 🟦 | 8 | Polishing sequebces  | Using blastn to heal ambigious nucleotides (IUPAC)            |  |  |
-| ⬜️ | 9 | Prokka               | Annotating of the high-quality assemblies                     |  |  |
+| 🟩 | 4 | Geneious             | Map assemblies with minimap2 to ref plasmids                  |  |  |
+| 🟩 | 5 | Geneious             | Map raw reads with bbmap to filtered plasmids                 |  |  |
+| 🟩 | 6 | [consensus_generator.py](https://github.com/edgeemer/genome-assembly/blob/0320ef527e1031f0302d8fa471001ec75017e4f7/Scripts/consensus_generator/consensus_generator.py)        | Using consensus from the step 5 improve step 4 assemblies     | [Borrelia Burgdorferi plasmid presence](https://docs.google.com/spreadsheets/d/1qOfwAWgnmrz81K9PqESubi8MufjOqxDshoJY8hGCvTg/edit?usp=sharing) \| [consensus_generator_report](Reports/plasmid/consensus_generator_report.md)|  |
+| 🟦 | 7 | Polishing sequebces  | Using blastn to heal ambigious nucleotides (IUPAC)            |  |  |
+| ⬜️ | 8 | Prokka               | Annotating of the high-quality assemblies                     |  |  |
